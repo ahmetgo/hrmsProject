@@ -33,13 +33,13 @@ public class EmployerManager implements EmployerService {
 	@Override
 	public Result add(Employer employer) {
 
-		if(employer.getCompany_name().isEmpty()) {
+		if(employer.getCompanyName().isEmpty()) {
 			return new ErrorResult("Lütfen şirketinizin ismini giriniz.");
 		}if(employer.getWeb_addres().isEmpty()) {
-			return new ErrorResult("Lütfen web sitenizi giriniz.");
-		}if(employer.getWeb_addres() != employer.getEmail() ) {
-			return new ErrorResult("Lütfen web siteniz ile aynı domaine sahip bir e-posta giriniz.");
-		}if(employer.getPhone_number()==null) {
+			return new ErrorResult("Lütfen web sitenizi giriniz.");}
+//		if(employer.getWeb_addres() != employer.getEmail() ) {
+//			return new ErrorResult("Lütfen web siteniz ile aynı domaine sahip bir e-posta giriniz.");}
+			if(employer.getPhone_number()==null) {
 			return new ErrorResult("Lütfen telefon numaranızı giriniz.");
 		}
 		if(employer.getPassword()== null) {
